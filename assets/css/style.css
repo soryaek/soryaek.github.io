@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-sec img{
   width: 100%;
+  object-position: cover;
 }
 /************** SECTION *********/
 section {
@@ -231,7 +232,7 @@ section {
   overflow: hidden;
   z-index: 1;
   background: rgba(69, 80, 91, 0.8);
-  height:420px;
+  height:430px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -306,9 +307,11 @@ section {
 }
 
 .project-btn{
-  border-radius: 5px;
+  padding-top: 10px;
   transition: 2s;
   background-color: black ;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 .project-btn a {
   text-decoration: none;
