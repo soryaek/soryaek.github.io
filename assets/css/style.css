@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #728394;
 }
 
-.image-sec img{
+.background-img img{
   width: 100%;
   object-position: cover;
 }
@@ -84,15 +84,15 @@ section {
   margin-bottom: 0;
 }
 
-.image-sec img{
+.background-img img{
   background: url(images/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin-top:-300px
-
 }
+
 /************** ABOUT *********/
 .about img{
   border-radius: 50%; 
@@ -120,18 +120,6 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
-}
-
- @media only screen and (max-width: 992px) {
-  .about .profile-pic {
-    display: flex;
-    flex-direction: column;
-  }
-  .about img{
-    width: 350px;
-    height: 350px;
-    margin: 0 auto;    
-  }
 }
 
 /************** TOOLS *********/
@@ -354,4 +342,26 @@ section {
 .movieverse-tech,
 .movieverse-desc{
   font-size: 14px;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .about .profile-pic {
+    display: flex;
+    flex-direction: column;
+  }
+  .about img{
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;    
+  }
+
+  .background-img {
+    display: none;
+  }
+
+  .navbar-container {
+    width: 100%;
+    background-color: pink;
+  }
 }
