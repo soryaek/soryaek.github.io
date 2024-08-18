@@ -351,17 +351,25 @@ section {
     flex-direction: column;
   }
   .about img{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;    
   }
-
   .background-img {
     display: none;
   }
-
   .navbar-container {
     width: 100%;
-    background-color: pink;
+    height: 80px;
+  }
+  .navbar-container > a > h1 {
+    padding-top: 10px;
+    font-size: 32px;
+  }
+  .navbar-container > button {
+    margin-bottom: 15px;
+  }
+  .job-title {
+    text-align: center;
   }
 }
