@@ -122,21 +122,15 @@ section {
   margin-bottom: 0;
 }
 
-@media only screen and (max-width: 992px) {
-  .about img{
-    width: 400px;
-    height: 450px;
-    margin-left: 120px;
-    
+ @media only screen and (max-width: 992px) {
+  .about .profile-pic {
+    display: flex;
+    flex-direction: column;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .about img{
     width: 350px;
-    height: 400px;
-    margin-left: 50px;
-    margin-right: 50px;
+    height: 350px;
+    margin: 0 auto;    
   }
 }
 
@@ -150,8 +144,6 @@ section {
   display: inline;
   box-shadow: 2px 4px 6px orange;
   flex-wrap: wrap;
-
-
 }
 
 .tools-container{
@@ -316,9 +308,6 @@ section {
 .project-btn a {
   text-decoration: none;
   color:white;
-   
-   
-
 }
 .project-btn h5{
  text-transform: uppercase;
