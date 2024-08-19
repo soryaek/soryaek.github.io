@@ -13,25 +13,28 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 /************** HOME *********/
 #home {
   position: sticky;
   top:0;
   z-index: 2;
 }
+
 #home img{
   width: 100%;
   font: 32px;
 }
+
 #home nav{
   position: sticky;
   top: 0;
 }
+
 #home .navbar-toggler-icon{
   float: right;
   color: black;
 }
+
 #home .navbar-brand{
   font-weight: 800;
   text-transform: uppercase;
@@ -48,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   object-position: cover;
 }
+
 /************** SECTION *********/
 section {
   padding: 60px 0;
@@ -201,9 +205,7 @@ section {
   border: 2px solid #0563bb;
 }
 
-
 /************** PORFOLIO ************/
-
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -306,6 +308,7 @@ section {
   transform: scale(1.1);
   cursor: pointer;
 }
+
 /************** FOOTER *********/
 #footer {
   background: #f7f8f9;
@@ -313,8 +316,8 @@ section {
   font-size: 18px;
   text-align: center;
   padding: 50px 0 30px 0;
-  /* padding-bottom: 150px; */
 }
+
 #footer .social-links {
   margin: 0 0 40px 0;
 }
@@ -332,62 +335,130 @@ section {
   margin-right: 4px;
   border-radius: 50%;
 }
+
 #footer .social-links a:hover {
   background: black;
   color: #fff;
   text-decoration: none;
 } 
+
 #footer h2{
   font-weight: 900;
 }
 
 .movieverse-tech,
-.movieverse-desc{
+.movieverse-desc {
   font-size: 14px;
 }
 
 .education-list {
   width: 50%;
-  min-width: 550px;
+  min-width: 500px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.html-icon img {
-  margin-top: 40px;
+/* Icons */
+#skills .icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  row-gap: 40px;
+}
+
+.icon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.golang-icon img {
+  width: 80% !important;
+  height: 80% !important;
+}
+
+.jquery-icon img {
+  width: 80% !important;
+  height: 80% !important;
+}
+
+.mongodb-icon img {
+  width: 80% !important;
+  height: 80% !important;
+}
+
+.nodejs-icon img {
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.mysql-icon img {
+  width: 60% !important;
+  height: 60% !important;
+  margin-bottom: 50px;
 }
 
 .css-icon img {
-  margin-top: 20px;
-}
-.express-icon img {
-  margin-bottom: 20px;
+  width: 70px !important;
 }
 
+.html-icon img {
+  width: 100px !important;
+}
+
+.express-icon img {
+  width: 140px !important;
+}
+
+.github-icon img {
+  width: 100px;
+  margin-bottom: 10px;
+}
 @media only screen and (max-width: 992px) {
   .about .profile-pic {
     display: flex;
     flex-direction: column;
   }
+  
   .about img{
     width: 300px;
     height: 300px;
     margin: 0 auto;    
   }
+  
   .background-img {
     display: none;
   }
+  
   .navbar-container {
     width: 100%;
     height: 80px;
   }
+  
   .navbar-container > a > h1 {
     padding-top: 10px;
     font-size: 32px;
   }
+  
   .navbar-container > button {
     margin-bottom: 15px;
   }
+  
   .job-title {
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  #skills .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+  }
+}
+
+
