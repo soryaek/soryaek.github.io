@@ -466,4 +466,10 @@ section {
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .small-screen-margin {
+    margin-top: -30px;
+    width: 100%;
+  }
+}
 
