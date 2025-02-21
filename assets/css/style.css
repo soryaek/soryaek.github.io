@@ -292,7 +292,7 @@ section {
 }
 
 .project-btn{
-  padding-top: 10px;
+  padding-top: 20px;
   transition: 2s;
   background-color: black ;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -302,7 +302,7 @@ section {
   text-decoration: none;
   color:white;
 }
-.project-btn h5{
+.project-btn h6{
  text-transform: uppercase;
 }
 .project-btn:hover{
