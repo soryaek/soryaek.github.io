@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /************** SECTION *********/
 section {
-  padding: 60px 0;
+  padding-top: 60px;
   overflow: hidden;
   background: transparent;
   margin: 20px;
@@ -166,7 +166,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-top: 40px;
 }
 
 .section-title h2 {
@@ -493,7 +493,8 @@ section {
 
 #footer .social-links h2 {
   text-align: center;
-  margin: 0 auto;
+  margin-left: 20px;
+  font-weight: 900;
 }
 
 #footer .social-links a {
@@ -515,10 +516,6 @@ section {
   color: #fff;
   text-decoration: none;
 } 
-
-#footer h2{
-  font-weight: 900;
-}
 
 .movieverse-tech,
 .movieverse-desc {
@@ -688,10 +685,10 @@ section {
     text-align: center;
   }
   
-  section {
+  /* section {
     margin: 10px;
     padding: 40px 0;
-  }
+  } */
   
   #footer {
     margin: 10px;
