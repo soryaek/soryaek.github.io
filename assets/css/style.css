@@ -1,6 +1,23 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(195, 207, 226, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 247, 250, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,15 +53,70 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #home .navbar-brand{
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #728394;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+#home .navbar-brand:hover {
+  color: #667eea;
+  transform: translateY(-1px);
+}
+
+.navbar-container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-container.scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 #home .navbar-nav{
   font-weight: 600;
-  font-size: 20px;
-  color: #728394;
+  font-size: 18px;
+  color: #2c3e50;
+  align-items: center;
+}
+
+#home .navbar-nav .nav-link {
+  color: #2c3e50 !important;
+  transition: all 0.3s ease;
+  padding: 8px 16px !important;
+  margin: 0 4px;
+  border-radius: 8px;
+  position: relative;
+  font-weight: 500;
+}
+
+#home .navbar-nav .nav-link:hover {
+  color: #667eea !important;
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+#home .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #667eea;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+#home .navbar-nav .nav-link:hover::after {
+  width: 80%;
 }
 
 .background-img img{
@@ -56,6 +128,13 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background: transparent;
+  margin: 20px;
+}
+
+#main {
+  background: transparent;
+  padding: 20px 0;
 }
 
 .section-title {
@@ -70,7 +149,7 @@ section {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
-  color: #45505b;
+  color: #2c3e50;
   margin-left: auto; 
   margin-right: auto;
 }
@@ -311,11 +390,12 @@ section {
 
 /************** FOOTER *********/
 #footer {
-  background: #f7f8f9;
-  color: #45505b;
+  background: transparent;
+  color: #2c3e50;
   font-size: 18px;
   text-align: center;
   padding: 50px 0 30px 0;
+  margin: 20px;
 }
 
 #footer .social-links {
@@ -325,7 +405,7 @@ section {
 #footer .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #45505b;;
+  color: #2c3e50;
   line-height: 1;
   padding: 8px 0;
   text-align: center;
@@ -477,12 +557,12 @@ section {
   
   .navbar-container {
     width: 100%;
-    height: 80px;
+    padding: 10px 0;
   }
   
   .navbar-container > a > h1 {
     padding-top: 10px;
-    font-size: 32px;
+    font-size: 28px;
   }
   
   .navbar-container > button {
@@ -492,6 +572,35 @@ section {
   .job-title {
     text-align: center;
   }
+  
+  section {
+    margin: 10px;
+    padding: 40px 0;
+  }
+  
+  #footer {
+    margin: 10px;
+  }
+  
+  #home .navbar-nav {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  #home .navbar-nav .nav-link {
+    padding: 12px 16px !important;
+    margin: 4px 0;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  #home .navbar-nav .nav-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: none;
+  }
 }
 
 
@@ -500,6 +609,37 @@ section {
   .small-screen-margin {
     margin-top: -30px;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 8px 0;
+  }
+  
+  #home .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  #home .navbar-nav {
+    padding: 15px;
+    margin-top: 10px;
+  }
+  
+  #home .navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 10px 12px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #home .navbar-brand {
+    font-size: 1.3rem;
+  }
+  
+  #home .navbar-nav .nav-link {
+    font-size: 15px;
+    padding: 8px 10px !important;
   }
 }
 
