@@ -499,6 +499,17 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Close mobile menu when clicking on navigation links
+    $(document).ready(function() {
+      $('.navbar-nav .nav-link').on('click', function() {
+        if ($(window).width() < 992) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+    });
+  </script>
 
 </body>
 
